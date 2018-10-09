@@ -71,9 +71,10 @@ module.exports = env => {
         { // Process javascript
           test: /\.js$/,
           exclude: /node_modules/,
-          use: {
-            loader: "babel-loader"
-          }
+          use: [
+            "babel-loader",
+            "eslint-loader"
+          ]
         },
         { // Handle images
           test: /\.(png|svg|jpg|gif)$/,
