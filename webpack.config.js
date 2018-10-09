@@ -31,8 +31,6 @@ function generateHtmlPlugins (templateDir) {
 }
 const htmlPlugins = generateHtmlPlugins('./src/html')
 
-
-
 let jsEntryArray = glob.sync('./src/modules/**/global.js') // Returns Array of files
 
 
@@ -99,15 +97,15 @@ module.exports = env => {
       ]
     },
     plugins: [
-      new CleanWebpackPlugin(['dist'],{}),
       new webpack.HotModuleReplacementPlugin(),
       new MiniCssExtractPlugin({
         filename: "[name].css",
-        chunkFilename: "[id].css"
-      })
+        chunkFilename: "[id].css",
+      }),
+      // # conditionally load CleanWebpackPlugin
+      ... (env.NODE_ENV !== 'development') ? [new CleanWebpackPlugin(['dist'],{})] : []
     ]
     .concat(htmlPlugins)
   }
   
 };
-
