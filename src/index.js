@@ -1,4 +1,3 @@
-import "./styles/main.scss";
-
+import "./styles/global.scss";
 
 // console.log('hello')

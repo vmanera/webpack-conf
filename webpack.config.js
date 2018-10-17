@@ -2,12 +2,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
-
-
 const path = require('path');
 const fs = require('fs');
 const glob = require("glob");
-
 
 // Our function that generates our html plugins
 function generateHtmlPlugins (templateDir) {
@@ -45,6 +42,11 @@ module.exports = env => {
     devServer: {
       contentBase: './dist',
       hot: true
+    },
+    resolve: {
+      alias: {
+        NodeModules: path.resolve(__dirname, 'node_modules/')
+      }
     },
     module: {
       rules: [

@@ -5,6 +5,7 @@ Currently does the following:
 
 - Sass compilation + Post CSS autoprefixer
 - Babel ES6 conversion
+- ESLint
 - hot-reload CSS (haven't tested how robust JS hot reload is)
 - It's fundamentally just a webpack config file
 - in theory can handle webpack,vue,whatever...
@@ -22,10 +23,10 @@ To get it up and running:
 
 ## Todo
 - ~~turn off 'delete folder' module for dev run~~
-- ESLint https://github.com/webpack-contrib/eslint-loader
+- ~~ESLint https://github.com/webpack-contrib/eslint-loader~~
 - Migrate/Create Module directory build file (bash script?)
     - https://medium.com/northcoders/creating-a-project-generator-with-node-29e13b3cd309
     - https://github.com/jprichardson/node-fs-extra
 - JSX transpile
-- Add CSS Breakpoints, with defaults set
+- ~~Add CSS Breakpoints, with defaults set~~
 - Seperate build commands... (ie. Dev, Prod, Pre-prod)

@@ -1,4 +1,10 @@
 .content {
     color: orange;
     // font-size: 40px;
+    @media screen and (min-width: $tablet){
+        color: blue;
+    }
+    @media screen and (min-width: $desktop){
+        color: red;
+    }
 }
