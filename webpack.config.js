@@ -71,7 +71,7 @@ module.exports = env => {
           ]
         },
         { // Process javascript
-          test: /\.js$/,
+          test: /\.js|jsx$/,
           exclude: /node_modules/,
           use: [
             "babel-loader",

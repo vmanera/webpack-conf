@@ -1,10 +1,8 @@
 import "./styles/global.scss";
 
-// import $ from "jquery";
-
 // import _ from 'lodash';
 
-//code splitting sample
+// # Webpack dynamic imports: code splitting sample # 
 function getComponent() {
     return import(/* webpackChunkName: "lodash" */ 'lodash').then(({ default: _ }) => {
         var element = document.createElement('div');
@@ -17,3 +15,12 @@ function getComponent() {
 getComponent().then(component => {
     document.body.appendChild(component);
 });
+
+// # React implementation example # 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
