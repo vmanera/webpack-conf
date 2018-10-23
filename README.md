@@ -21,12 +21,17 @@ To get it up and running:
 ## Instalation
 * npm install
 
+# Known issues
+- hot reloading works, but html changes does not trigger a full reload. 
+    - [html-webpack-plugin issue](https://github.com/webpack/webpack-dev-server/issues/1271)
+        - either figure a workaround 
+        - or replace this plugin with a different (simpler) html loader
 ## Todo
 - ~~turn off 'delete folder' module for dev run~~
 - ~~ESLint https://github.com/webpack-contrib/eslint-loader~~
 - Migrate/Create Module directory build file (bash script?)
     - https://medium.com/northcoders/creating-a-project-generator-with-node-29e13b3cd309
     - https://github.com/jprichardson/node-fs-extra
-- JSX transpile
+- ~~JSX transpile~~
 - ~~Add CSS Breakpoints, with defaults set~~
 - Seperate build commands... (ie. Dev, Prod, Pre-prod)
